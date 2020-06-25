@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Register Courses</title>
+
+<style>
+form{
+      background-color: rgba(135,206,250,0.5);
+      position : relative;
+      width  : 500px;
+      height : 600px;
+      margin : 0 auto;
+      padding: 1em;
+      box-sizing: border-box;
+   }
+
+</style>
 </head>
 <body style="background-image: url(https://images.wallpaperscraft.com/image/books_old_reading_124989_2560x1080.jpg)">
 <center>
 <br><br><br><br><br><br>
-<form method="get" target="_self" action="thanks.html">
- 
- <label for="fname"><font color="white"><b>First name:</label><br>
-  <input type="text" id="fname" name="fname"><br><br>
+<form method="get" target="_self" action="thanks.html" >
+ <font color="white">
 
-  <label for="lname">Last name:</label> <br>
-  <input type="text" id="lname" name="lname"><br><br>
+ <label for="fname"><b>Name</label><br>
+  <input type="text" id="name" name="name"><br><br>
 
-  <label for="year">Year</label> <br>
-  <input type="radio" id="1" name="year" value="1">
-  <label for="1">I</label><br>
-  <input type="radio" id="2" name="year" value="2">
-  <label for="2">II</label><br>
-  <input type="radio" id="3" name="year" value="3">
-  <label for="3">III</label><br>
-  <input type="radio" id="4" name="year" value="4">
-  <label for="4">IV</label><br><br>
+  <label for="lname">Phone</label> <br>
+  <input type="number" id="phone" name="phone" maxlength="10"><br><br>
 
-  <label for="semester">Semester</label> <br>
-  <input type="radio" id="1" name="semester" value="1">
-  <label for="1">I</label><br>
-  <input type="radio" id="2" name="semester" value="2">
-  <label for="2">II</label><br><br>
- 
- <label for="course">Course name:</label><br>
-  <input type="text" id="course" name="course"><br><br><br>
+  <label for="course">Course</label> <br>
+  <input type="radio" id="1" name="course" value="1">
+  <label for="1">Bachelors</label>
+  <input type="radio" id="2" name="course" value="2">
+  <label for="2">Masters</label><br><br>
+  
+  <label for="desc">Description</label><br>
+  <textarea name="desc" rows="10" cols="30"></textarea><br><br>
+
+  <label for="subject">Subject Interests</label> <br><br>
+  <input type="checkbox" id="subject" name="os" >
+  <label for="subject" >Operating Systems</label></input><br>
+  <input type="checkbox" id="subject" name="dbms" >
+  <label for="subject" >DataBase Management Systems</label></input><br>
+  <input type="checkbox" id="subject" name="cd" >
+  <label for="subject" >Compiler Design</label></input><br>
+  <input type="checkbox" id="subject" name="iss" >
+  <label for="subject">Information Management Systems</label></input><br><br>
 
   <input type="submit" value="Submit">
 </form>
