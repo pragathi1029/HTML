@@ -1,61 +1,184 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Pragathi S</title>
-<style>
-table,th,td{
-border: 1px solid black;
-border-collapse:collapse;
-}
-</style>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Pragathi S</title>
+    <style>
+
+        body{
+            background-image: url("https://wallpaperset.com/w/full/3/3/1/205857.jpg");
+            background-repeat: no-repeat;
+        }
+        .container{
+            width:800px;
+            padding:20px;
+            margin:auto;
+            background-color: rgba(201, 213, 228, 0.5);
+            text-align: center;
+        }
+        table{
+            border: 3px solid black;
+            border-collapse:collapse;
+            display: table;
+            margin:auto;
+            margin-top:20px;
+            outline: 4px solid rgb(148, 209, 5);
+            outline-offset: 15px;
+        }
+        tr:nth-child(odd) {background-color: #f2f2f2;}
+        td{
+            border: 1px solid black;
+            border-collapse:collapse;
+        }
+        th{
+            background-color:rgb(118, 118, 172);
+            border: 1px solid black;
+            border-collapse:collapse;
+            font-weight:800;
+            text-align: center;
+        }
+        h1{
+            font-family: sans-serif;
+            font-style: italic;
+            padding:25px;
+        }
+
+        h2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:rgb(170, 230, 92);
+            font-weight: 800;
+            text-decoration: underline;
+        }
+
+        h3{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        img{
+            border: 2px solid black;
+            margin: 25px ;
+        }
+
+        #cap{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:rgba(105, 45, 11, 0.623);
+        }
+
+        .head{
+            background-color: rgb(37, 35, 35);
+            color:white;
+            min-height: 60px;
+            width:100%;
+            vertical-align: middle;
+            position: sticky;
+            top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(37, 35, 35);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 130px;
+            text-decoration: none;
+        }
+        
+        #stabs{
+            z-index:-1;
+        }
+
+        tbody>tr>:nth-child(1){
+            text-align:left;
+        }
+
+        tbody>tr>:nth-child(2){
+            text-align:right;
+        }
+    </style>
 </head>
-<center>
-<h1>Pragathi S</h1>
-<h2>Gayatri Vidya Parishad College of Engineering ( Autonomous )</h2>
-<h3><a href="Courses.html">Computer Science Engineering</a></h3>
 
-<img src="https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" height=164px width=200px></img>
-</center>
+<body>
+    <img style="float:right;" src="https://static.thenounproject.com/png/3215732-200.png">
+    <img style="float: left;" src="https://static.thenounproject.com/png/391685-200.png">
+    <div class="head">
+        
+        <ul>
+            <li><a class="active" href="HTML.html">Home</a></li>
+            <li><a href="register.html">Registeration</a></li>
+            <li><a href="details.html">Details</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1 id="name" style="color:rgb(53, 21, 170)">Pragathi S</h1>
+        <h2>Gayatri Vidya Parishad College of Engineering ( Autonomous )</h2>
+        <h3><a href="Courses.html" style="color:rgb(219, 101, 22)">Computer Science Engineering</a></h3>
 
-<center>
-<table style="text-align:center;">
-<caption><b>Previous Semester Marks</b></caption>
-<tr>
-<th><i>Subject</i></th>
-<th><i>Marks ( Out of 10.0 )</i></th>
-</tr>
-<tr>
-<td>Software Engineering</td>
-<td>8</td>
-</tr>
-<tr>
-<td>Unix and shell programming</td>
-<td>8</td>
-</tr>
-<tr>
-<td>Formal languages and automata theory</td>
-<td>9</td>
-</tr>
-<tr>
-<td>Embedded Systems</td>
-<td>8</td>
-</tr>
-<tr>
-<td>Web progaramming</td>
-<td>8</td>
-</tr>
-<tr>
-<td>Artificial Intelligence</td>
-<td>6</td>
-</tr>
-<tr>
-<td>Web programming lab</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Embedded Systems lab</td>
-<td>10</td>
-</tr>
-</center>
+        <img src="https://www.microspot.com/images/registernav.png" width=200px height=200px>
+
+        <table style="text-align:center;">
+            <caption id="cap"><b>Previous Semester Marks</b></caption>
+            <thead>
+            <tr>
+                <th><i>Subject</i></th>
+                <th><i>Marks ( Out of 10.0 )</i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Software Engineering</td>
+            <td>8</td>
+            </tr>
+            <tr>
+            <td>Unix and shell programming</td>
+            <td>8</td>
+            </tr>
+            <tr>
+            <td>Formal languages and automata theory</td>
+            <td>9</td>
+            </tr>
+            <tr>
+            <td>Embedded Systems</td>
+            <td>8</td>
+            </tr>
+            <tr>
+            <td>Web progaramming</td>
+            <td>8</td>
+            </tr>
+            <tr>
+            <td>Artificial Intelligence</td>
+            <td>6</td>
+            </tr>
+            <tr>
+            <td>Web programming lab</td>
+            <td>10</td>
+            </tr>
+            <tr>
+            <td>Embedded Systems lab</td>
+            <td>10</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>    
+
+    <script type="text/javascript"> 
+        document.getElementById("name").onclick = function() { 
+  
+            document.getElementById("name").style.display = "none"; 
+  
+        } 
+    </script>
+
+</body>
 </html>
 

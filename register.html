@@ -1,55 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<meta charset="utf-8">
 <title>Register Courses</title>
-
 <style>
-form{
-      background-color: rgba(135,206,250,0.5);
-      position : relative;
-      width  : 500px;
-      height : 600px;
-      margin : 0 auto;
-      padding: 1em;
-      box-sizing: border-box;
+
+   input[type=radio],input[type=checkbox]{
+      width:100%;
    }
 
+   .container{
+      width:700px;
+      margin:auto;
+      background-color:rgba(135,206,250,0.5);
+      text-align: center;
+      align-items: center;
+      color:lavender;
+   }
+
+   .p {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+   }
+
+   .k {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+      }
+   
+   .element:after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+
+   input[type=text], input[type=number]{
+      width: 80%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+   }
+   textarea{ 
+      width: 80%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+   }
+   
+   label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+   }
+
+   input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      }
+
 </style>
+
 </head>
 <body style="background-image: url(https://images.wallpaperscraft.com/image/books_old_reading_124989_2560x1080.jpg)">
-<center>
-<br><br><br><br><br><br>
-<form method="get" target="_blank" action="thanks.html" >
- <font color="white">
+   <div class="container" style="vertical-align: middle;">
+      <form method="get" target="_blank" action="thanks.html" >
+         <div class="element">
+            <div class="p">
+              <label for="name">Name</label>
+            </div>
+            <div class="k">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
 
- <label for="fname"><b>Name</label><br>
-  <input type="text" id="name" name="name"><br><br>
+          <div class="element">
+            <div class="p">
+              <label for="phone">Phone</label>
+            </div>
+            <div class="k">
+               <input type="number" id="phone" name="phone" placeholder="Number(10 digits)">
+            </div>
+          </div>
 
-  <label for="lname">Phone</label> <br>
-  <input type="number" id="phone" name="phone" maxlength="10"><br><br>
+          <div class="element">
+            <div class="p">
+              <label for="course">Course</label>
+            </div>
+            <div class="k">
+               <input type="radio" id="course1" name="course1" value="1">
+               <label >Bachelors</label>
+               <input type="radio" id="course2" name="course2" value="2">
+               <label >Masters</label>
+            </div>
+          </div>
 
-  <label for="course">Course</label> <br>
-  <input type="radio" id="course" name="course" value="1">
-  <label for="1">Bachelors</label>
-  <input type="radio" id="course" name="course" value="2">
-  <label for="2">Masters</label><br><br>
-  
-  <label for="desc">Description</label><br>
-  <textarea name="desc" rows="10" cols="30"></textarea><br><br>
+          <div class="element">
+            <div class="p">
+              <label for="desc">Description</label>
+            </div>
+            <div class="k">
+               <textarea name="desc" rows="10" cols="30" placeholder="Describe ..."></textarea>
+            </div>
+          </div>
 
-  <label for="subject">Subject Interests</label> <br><br>
-  <input type="checkbox" id="subject" name="os" >
-  <label for="subject" >Operating Systems</label></input><br>
-  <input type="checkbox" id="subject" name="dbms" >
-  <label for="subject" >DataBase Management Systems</label></input><br>
-  <input type="checkbox" id="subject" name="cd" >
-  <label for="subject" >Compiler Design</label></input><br>
-  <input type="checkbox" id="subject" name="iss" >
-  <label for="subject">Information Management Systems</label></input><br><br>
-  
-  <input type="submit" value="Submit">
-</form>
-</center>
+          <div class="element">
+            <div class="p">
+              <label for="subject">Subject Interests</label>
+            </div>
+            <div class="k">
+               <input type="checkbox" id="subject" name="os" >
+               <label >Operating Systems</label>
+               <input type="checkbox" id="subject1" name="dbms" >
+               <label >DataBase Management Systems</label>
+               <input type="checkbox" id="subject2" name="cd" >
+               <label >Compiler Design</label>
+               <input type="checkbox" id="subject3" name="iss" >
+               <label >Information Management Systems</label>
+            </div>
+          </div>
+
+          <div class="row,container">
+            <input type="submit" value="Submit">
+          </div>
+
+      </form>
+   </div>
 </body>
 

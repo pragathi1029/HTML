@@ -1,43 +1,101 @@
 <!DOCTYPE html>
-<head>
-<title>Courses</title>
-</head>
-<body>
-<p>The courses I have attended are:</p>
-<ol>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Courses</title>
+        <style>
+            .container{
+                width:700px;
+                margin:auto;
+                background-color: whitesmoke;
+            }
+            .button{
+                display: table;   
+                margin:auto;
+                width:700px;
+                background-color: whitesmoke;
+            }
+            
+            body{
+                background-color: lightblue;
+            }
+            .table {
+                display: table;   
+                margin: 0 auto;
+            }
+            
+            li{
+                
+                color:whitesmoke;
+                padding: 5px;
+            }
+            a:link, a:visited {
+                background-color: rgb(70, 61, 61);
+                color: white;
+                padding: 14px 25px;
+                text-decoration: none;
+                display: table;
+                margin:auto;
+            }
 
-<li>Operating Systems
-<ul>
-<li>Memory management</li>
-<li>Device management</li>
-</ul>
-</li>
+            a:hover, a:active {
+                background-color:rgb(70, 61, 61);
+            } 
 
-<li>DataBase Management Systems
-<ul>
-<li>Normalization</li>
-<li>Transaction concurrency control</li>
-</ul>
-</li>
+            ol {
+                background:rgb(32, 31, 31);
+                padding: 20px;
+            }
 
-<li>Compiler Design
-<ul>
-<li>Code generation</li>
-<li>Code optimization</li>
-<li>Intermediate code generation</li>
-<li>Syntax analysis</li>
-<li>Semantic analysis</li>
-</ul>
-</li>
+            ul {
+                background: #444647;
+                padding: 20px;
+            }           
+                        
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1 style="text-align: center;">Courses</h1>
+        <ol class="table">
 
-<li>Information Storage Management
-<ul>
-<li>NAS</li>
-<li>SAN</li>
-</ul>
-</li>
+            <li>Operating Systems
+                <ul style=>
+                    <li>Memory management</li>
+                    <li>Device management</li>
+                </ul>
+            </li>
 
-</ol>
-</body>
+            <li>DataBase Management Systems
+                <ul>
+                    <li>Normalization</li>
+                    <li>Transaction concurrency control</li>
+                </ul>
+            </li>
 
-<a href="register.html">Click here to register for more</a>
+            <li>Compiler Design
+                <ul>
+                    <li>Code generation</li>
+                    <li>Code optimization</li>
+                    <li>Intermediate code generation</li>
+                    <li>Syntax analysis</li>
+                    <li>Semantic analysis</li>
+                </ul>
+            </li>
+
+            <li>Information Storage Management
+                <ul>
+                    <li>NAS</li>
+                    <li>SAN</li>
+                </ul>
+            </li>
+
+        </ol>
+        
+        <div >
+            <a href="register.html" style="margin-top:20px;">Register</a>
+        </div>
+        </div>
+    </body>
+
+</html>
