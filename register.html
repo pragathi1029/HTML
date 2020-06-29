@@ -1,79 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Register Courses</title>
-<style>
+   <meta charset="utf-8">
+   <title>Register Courses</title>
+   <style>
 
-   input[type=radio],input[type=checkbox]{
-      width:100%;
-   }
-
-   .container{
-      width:700px;
-      margin:auto;
-      background-color:rgba(135,206,250,0.5);
-      text-align: center;
-      align-items: center;
-      color:lavender;
-   }
-
-   .p {
-      float: left;
-      width: 25%;
-      margin-top: 6px;
-   }
-
-   .k {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
-      }
-   
-   .element:after {
-      content: "";
-      display: table;
-      clear: both;
-   }
-
-   input[type=text], input[type=number]{
-      width: 80%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-   }
-   textarea{ 
-      width: 80%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-   }
-   
-   label {
-      padding: 12px 12px 12px 0;
-      display: inline-block;
-   }
-
-   input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
+      input[type=radio],input[type=checkbox]{
+         width:100%;
       }
 
-</style>
+      .container{
+         width:700px;
+         margin:auto;
+         background-color:rgba(135,206,250,0.5);
+         text-align: center;
+         align-items: center;
+         color:lavender;
+      }
+
+      .p {
+         float: left;
+         width: 25%;
+         margin-top: 6px;
+      }
+
+      .k {
+         float: left;
+         width: 75%;
+         margin-top: 6px;
+         }
+      
+      .element:after {
+         content: "";
+         display: table;
+         clear: both;
+      }
+
+      input[type=text], input[type=number]{
+         width: 80%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         resize: vertical;
+      }
+      textarea{ 
+         width: 80%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         resize: vertical;
+      }
+      
+      label {
+         padding: 12px 12px 12px 0;
+         display: inline-block;
+      }
+
+      input[type=submit] {
+         background-color: #4CAF50;
+         color: white;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         float: right;
+         }
+
+   </style>
+
+   <script>
+      function check(){
+         var name = document.myform.firstname.value;
+         var phone = document.myform.phone.value;
+         var subjects = document.myform.subject;
+         var count=0;
+
+         var patt = /^[a-zA-Z]+$/i;
+         var patt1 = /^[0-9]{10}$/i;
+
+         if(!(patt.test(name))){
+            alert("Name must only consist of alphabets");
+            return false;
+         }
+
+         if(!(patt1.test(phone))){
+            alert("Phone number must consist of only 10 digits with no alphabets");
+            return false;
+         }
+         
+         for(i=0;i<subjects.length;i++)
+         {
+            if(subjects[i].checked)
+            {
+               count=1;
+               break;
+            }
+         }
+         if(count==0)
+         {
+            alert('Atleast one subject must be selected..');
+            return false;
+         }
+
+         return true;
+      }
+   </script>
 
 </head>
 <body style="background-image: url(https://images.wallpaperscraft.com/image/books_old_reading_124989_2560x1080.jpg)">
    <div class="container" style="vertical-align: middle;">
-      <form method="get" target="_blank" action="thanks.html" >
+      <form method="get" name="myform" target="_blank" action="details.html" onsubmit=" return check()">
          <div class="element">
             <div class="p">
               <label for="name">Name</label>
@@ -88,7 +126,7 @@
               <label for="phone">Phone</label>
             </div>
             <div class="k">
-               <input type="number" id="phone" name="phone" placeholder="Number(10 digits)">
+               <input type="number" id="phone" name="phone" length=10 placeholder="Number(10 digits)">
             </div>
           </div>
 
@@ -115,16 +153,16 @@
 
           <div class="element">
             <div class="p">
-              <label for="subject">Subject Interests</label>
+              <label >Subject Interests</label>
             </div>
             <div class="k">
-               <input type="checkbox" id="subject" name="os" >
+               <input type="checkbox" id="subject" name="subject" >
                <label >Operating Systems</label>
-               <input type="checkbox" id="subject1" name="dbms" >
+               <input type="checkbox" id="subject1" name="subject" >
                <label >DataBase Management Systems</label>
-               <input type="checkbox" id="subject2" name="cd" >
+               <input type="checkbox" id="subject2" name="subject" >
                <label >Compiler Design</label>
-               <input type="checkbox" id="subject3" name="iss" >
+               <input type="checkbox" id="subject3" name="subject" >
                <label >Information Management Systems</label>
             </div>
           </div>

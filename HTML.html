@@ -106,6 +106,8 @@
             text-align:right;
         }
     </style>
+
+
 </head>
 
 <body>
@@ -126,7 +128,7 @@
 
         <img src="https://www.microspot.com/images/registernav.png" width=200px height=200px>
 
-        <table style="text-align:center;">
+        <table style="text-align:center;" id="marks">
             <caption id="cap"><b>Previous Semester Marks</b></caption>
             <thead>
             <tr>
@@ -168,7 +170,28 @@
             <td>10</td>
             </tr>
             </tbody>
+            <tfoot >
+                <td style="background-color: blueviolet;">Average</td>
+                <td style="background-color: blueviolet;" id='avg'></td>
+            </tfoot>
         </table>
+
+        <script>
+            function Avg(){
+                document.getElementById('avg').innerHTML=0;
+                var table=document.getElementById("marks");
+                var count=0;
+                var sum=0;
+                for(i=1;i<table.rows.length-1;i++)
+                {
+                        count+=1;
+                        sum+=Number(table.rows[i].cells[1].innerHTML);
+                }
+                avg.innerHTML = sum/count;
+            }
+            Avg();
+        </script>
+
     </div>    
 
     <script type="text/javascript"> 

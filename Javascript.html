@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <style>
+            body{
+                text-align: center;
+                margin:auto;
+            }
+        </style>
+        <script>
+            function ABC()
+            {
+                var x = 1;
+                var y = 2;
+                document.write("The sum of " + x + " and " + y + " is " + (x+y) + ".<br>");
+            }
+
+            function Array1()
+            {
+                var arr=[1,2,3,4,5];
+                var third=arr[3];
+                document.write('The element at index 3 in [1,2,3,4,5] when typecasted to string is '+String(third)+".<br>");
+            }
+
+            function mathFunc()
+            {
+                var x= 5;
+                document.writeln("Power of 5: "+Math.pow(x)+"<br>");
+                document.writeln("Square root of 5: "+Math.sqrt(x)+"<br>");
+                document.writeln("Absolute value of 5: "+Math.abs(-5)+"<br>");
+                
+                var rand = Math.random();
+                document.writeln("random number: "+rand+"<br>");
+                document.writeln("ceil of random number: "+Math.ceil(rand)+"<br>");
+                document.writeln("floor of random number: "+Math.floor(rand)+"<br>");
+                document.writeln("rounding to nearest integer: "+Math.round(rand)+"<br>");
+                document.writeln("sin of number: "+Math.sin(rand));
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript</h1>
+        <p>JavaSript is the programming language of web. Not only web pages but many desktop and server programs use javascript.</p>
+        <p>JavaScript is a client-side scripting language developed by Brendan Eich.
+            JavaScript can be run on any operating systems and almost all web browsers.</p>
+        <p>Being a scripting language, JavaScript cannot run on its own. In fact, the browser is responsible for running JavaScript code. When a user requests an HTML 
+            page with JavaScript in it, the script is sent to the browser and it is up to the browser to execute it. The main advantage of JavaScript is that all modern 
+            web browsers support JavaScript.</p>
+        <br><br>
+        <p>Examples</p>
+        <script>
+            ABC();
+            Array1();
+            mathFunc();
+        </script>
+    </body>
+</html>
