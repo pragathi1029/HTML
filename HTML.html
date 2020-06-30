@@ -7,6 +7,7 @@
 
         body{
             background-image: url("https://wallpaperset.com/w/full/3/3/1/205857.jpg");
+            background-attachment:scroll;
             background-repeat: no-repeat;
         }
         .container{
@@ -111,8 +112,9 @@
 </head>
 
 <body>
-    <img style="float:right;" src="https://static.thenounproject.com/png/3215732-200.png">
-    <img style="float: left;" src="https://static.thenounproject.com/png/391685-200.png">
+    <img style="float:right;" id="left" src="https://static.thenounproject.com/png/3215732-200.png">
+    <img style="float: left;" id="right" src="https://static.thenounproject.com/png/391685-200.png">
+    
     <div class="head">
         
         <ul>
@@ -191,6 +193,10 @@
             }
             Avg();
         </script>
+        <br><br><br>
+
+        <button onclick="document.getElementById('demo').innerHTML=Date()">Know Today's Date ...</button>
+        <p id="demo"></p>
 
     </div>    
 

@@ -36,25 +36,91 @@
                 document.writeln("ceil of random number: "+Math.ceil(rand)+"<br>");
                 document.writeln("floor of random number: "+Math.floor(rand)+"<br>");
                 document.writeln("rounding to nearest integer: "+Math.round(rand)+"<br>");
-                document.writeln("sin of number: "+Math.sin(rand));
+                document.writeln("sin of number: "+Math.sin(rand) + "<br><br>");
+            }
+
+            function printDate(){
+                document.write("Date: "+Date() + "<br>")
+            }
+
+            function control_flows1()
+            {
+                try{
+                    var x = parseInt(document.getElementById('check').value);
+                    if(isNaN(x))
+                        throw "";
+                }
+                catch(err){
+                    document.write("Enter a number !!");
+                    return;
+                }
+                if(x>=10 && x<=100)
+                    document.write(x + " lies between 10 and 100<br>");
+                else
+                    document.write(x + " does not lie between 10 and 100<br>");
+            }
+
+            function control_flows2(){
+                try{
+                    var x = parseInt(document.getElementById('fib').value);
+                    if(isNaN(x))
+                        throw "";
+                }
+                catch(err){
+                    document.write("Enter a number !!");
+                    return;
+                }
+                var a = 0;
+                var b = 1;
+                document.write("Priniting fibonacci series upto "+x+":<br>"+ a+" "+ b+" ");
+                while(a+b<=x)
+                {
+                    document.write((a+b)+" ");
+                    var c = b;
+                    b = a+b;
+                    a = c;
+                }
             }
 
         </script>
     </head>
     <body>
         <h1>JavaScript</h1>
-        <p>JavaSript is the programming language of web. Not only web pages but many desktop and server programs use javascript.</p>
-        <p>JavaScript is a client-side scripting language developed by Brendan Eich.
-            JavaScript can be run on any operating systems and almost all web browsers.</p>
-        <p>Being a scripting language, JavaScript cannot run on its own. In fact, the browser is responsible for running JavaScript code. When a user requests an HTML 
-            page with JavaScript in it, the script is sent to the browser and it is up to the browser to execute it. The main advantage of JavaScript is that all modern 
-            web browsers support JavaScript.</p>
+        <p id='text'>JavaSript is the programming language of web. Not only web pages but many desktop and server programs use javascript.
+            JavaScript is a client-side scripting language developed by Brendan Eich.
+            JavaScript can be run on any operating systems and almost all web browsers.Being a scripting language, JavaScript cannot run on its own. In fact, the 
+            browser is responsible for running JavaScript code. When a user requests an HTML page with JavaScript in it, the script is sent to the browser and it is 
+            up to the browser to execute it. The main advantage of JavaScript is that all modern web browsers support JavaScript.</p>
         <br><br>
         <p>Examples</p>
+        
         <script>
             ABC();
+
             Array1();
+
             mathFunc();
+
+            printDate();
+
         </script>
+        <br>
+        Enter x: <input type='text' id='check'>
+         <button onclick="control_flows1()">Check if x is between 10 and 100</button>
+
+        <br>Enter n: <input type='text' id='fib'>
+         <button onclick="control_flows2()">Print fibonacci series</button>
+
+         <br><br>
+
+         <script>
+            function a(){
+            var text = document.getElementById('text').innerHTML;
+            var arr = text.split(' ');
+            document.write("The 5th, 7th and 10th words from above text are: "+" "+arr[4]+", "+arr[6]+" and "+arr[9]+" respectively.<br><br><br>");
+            }
+            a();
+        </script>
+
     </body>
 </html>
