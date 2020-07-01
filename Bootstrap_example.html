@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <title>Bootstrap</title> 
+    
+        <meta charset="utf-8"> 
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> 
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+
+        <style>
+            .cont1{
+                margin:40px;
+            }
+
+            body{
+                background-image: url(https://lildevilmama.com/wp-content/uploads/2019/05/hello-world.png);
+            }
+
+            p{
+                color:lavender;
+            }
+
+            li:hover{
+                background-color: green;
+                color:honeydew;
+            }
+
+        </style>
+
+    </head> 
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="font-weight: 800; padding: 0;">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Bootstrap_example.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="HelloWorld.html">HelloWorld Program</a>
+                </li>
+            </div>
+          </nav>
+
+        <h1 style="text-align: center; color: rosybrown; font-family:fantasy">Hello World!!</h1>
+        <div class="cont1">
+            <p>A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a program is very simple in most 
+                programming languages, and is often used to illustrate the basic syntax of a programming language. It is often the first program written by people
+                learning to code. It can also be used as a sanity test to make sure that a computer language is correctly installed, and that the operator understands 
+                how to use it.</p>
+
+            <img src="https://miro.medium.com/max/3200/1*0KFB17_NGTPB0XWyc4BSgQ.jpeg" style="float:left;  width:700px;height:500px;" id="image1">
+            <img src="https://www.techrev.com/wp-content/uploads/2016/05/helloworld-header-2.jpg" style="height:500px; width:700px; float:right;" id="image2">
+        </div>
+
+        <script>
+            $( "#image1" ).click(function() {
+                $( "#image1" ).hide( "slow", function() {
+                    alert( "Animation complete." );
+                    $( "image2" ).show(2000);
+                });
+            });
+
+            $( "#image1" ).click(function() {
+                $( "#image2" ).show("fast");
+            });
+        </script>
+
+        <script>
+            $( "#image2" ).click(function() {
+                $( "#image2" ).hide( "slow", function() {
+                    alert( "Animation complete." );
+                });
+            });
+
+            $( "#image2" ).click(function() {
+                $( "#image1" ).show("fast");
+            });
+        </script>
+    </body>
+</html>
