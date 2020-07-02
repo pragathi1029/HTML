@@ -15,7 +15,9 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> \
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <style>
             .cont1{
@@ -24,6 +26,7 @@
 
             body{
                 background-image: url(https://lildevilmama.com/wp-content/uploads/2019/05/hello-world.png);
+                background-attachment: scroll;
             }
 
             p{
@@ -33,6 +36,27 @@
             li:hover{
                 background-color: green;
                 color:honeydew;
+            }
+
+            .container1{
+                background-image:url(https://qph.fs.quoracdn.net/main-qimg-d4a764ba4502b59eff010633a8e3b4e2.webp);
+                text-align: center;
+                width:500px;
+                height:500px;
+                margin:auto;
+            }
+
+            .container2{
+                background-image:url(https://cs10.pikabu.ru/post_img/big/2018/04/15/11/1523822306197832141.jpg);
+                text-align: center;
+                margin:auto;
+                width:700px;
+                height:700px;
+            }
+
+            .cont2{
+                margin:auto;
+                text-align: center;
             }
 
         </style>
@@ -60,9 +84,44 @@
                 learning to code. It can also be used as a sanity test to make sure that a computer language is correctly installed, and that the operator understands 
                 how to use it.</p>
 
-            <img src="https://miro.medium.com/max/3200/1*0KFB17_NGTPB0XWyc4BSgQ.jpeg" style="float:left;  width:700px;height:500px;" id="image1">
-            <img src="https://www.techrev.com/wp-content/uploads/2016/05/helloworld-header-2.jpg" style="height:500px; width:700px; float:right;" id="image2">
+            <img src="https://miro.medium.com/max/3200/1*0KFB17_NGTPB0XWyc4BSgQ.jpeg" style="width:700px;height:500px;" id="image1">
+            <img src="https://www.techrev.com/wp-content/uploads/2016/05/helloworld-header-2.jpg" style="height:500px; width:700px;" id="image2">
         </div>
+
+        <p style="text-align: center;">Double click to toggle and try it !!</p>
+        <div class="container1" id="div1">
+        </div>
+        <br><br><br><br>
+        <div class="cont2">
+            <button id='fadein'>Click here to show the Program !!</button>
+            <button id='fadeout'>Click here to hide the Program !!</button>
+            <img id='fadeimg' width=700px height=500px style="display:none;" src="https://lh3.googleusercontent.com/proxy/5CScskeQ8l6fSGyrQGrBAmurJCLuiNsAHvCVG5XBLjcxENcCRi8LLNrTLEpBDkOLdfBenw3UTVRsup2_31cX1zKnGDAZh_BzPOQN2BH5" >
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <script>
+            $(document).ready(function(){
+                $("#fadein").click(function(){
+                    $("#fadeimg").fadeIn("slow");
+                });
+            });
+        </script>
+    
+        <script>
+            $(document).ready(function(){
+                $("#fadeout").click(function(){
+                    $("#fadeimg").fadeOut();
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $("#div1").dblclick(function(){
+                    $( this ).toggleClass("container2");
+                });
+            });
+        </script>
+
 
         <script>
             $( "#image1" ).click(function() {
